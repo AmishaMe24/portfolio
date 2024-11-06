@@ -7,6 +7,8 @@ import world_stock from '../../../public/world_stock.png';
 import AnimatedTitle from '../animations/AnimatedTitle';
 import netflix_dashboard from '../../../public/netflix_dashboard.png';
 import rising_indians from '../../../public/rising_indians.png';
+import codeTranslator from '../../../public/codeTranslator.png';
+import faceMaskDetection from '../../../public/faceMaskDetection.png';
 
 const Projects = () => {
     const projects = [
@@ -16,6 +18,13 @@ const Projects = () => {
             image: pawstime,
             link: "https://github.com/AmishaMe24/PawsTime",
             technologiesUsed: ["React", "Node.js", "Express", "MongoDB", "AWS"]
+        },
+        {
+            title: "AI Code Translator",
+            description: "A powerful web application built with Next.js and TypeScript that leverages the Gemini API for intelligent code translation. This tool uses advanced prompt engineering techniques to accurately convert code between different programming languages, streamlining development workflows and enhancing cross-language compatibility for developers.",
+            image: codeTranslator,
+            link: "https://github.com/AmishaMe24/ai-code-translator",
+            technologiesUsed: ["Next.js", "TypeScript", "Gemini API"]
         },
         {
             title: "Exploring World Stock Prices with Machine Learning",
@@ -29,6 +38,13 @@ const Projects = () => {
             description: "Imagine a music player that reads your mood! It analyzes your facial expressions (thanks to OpenCV!) and uses a powerful neural network (CNN) to predict your emotions. Feeling happy? Get ready for some upbeat tunes! Feeling stressed? Calming melodies await.  This project showcases my expertise in computer vision, deep learning, and creating an interactive music experience.",
             image: realTimeMusicPlayer,
             link: "https://github.com/shahnitav/Real-Time-Emotion-Recognition-Based-Music-Player",
+            technologiesUsed: ["Python", "TensorFlow", "CNNs", "OpenCV"]
+        },
+        {
+            title: "Face Mask Detection System",
+            description: "The Face Mask Detection System is an advanced real-time application that utilizes TensorFlow and OpenCV to accurately detect whether individuals are wearing face masks. With high detection accuracy achieved through convolutional neural networks trained on a specialized COVID-19 dataset, this system integrates sensor data for enhanced responsiveness, making it ideal for deployment in public spaces to promote safety during the pandemic.",
+            image: faceMaskDetection,
+            link: "https://github.com/AmishaMe24/Face-Mask-Detection-System",
             technologiesUsed: ["Python", "TensorFlow", "CNNs", "OpenCV"]
         },
         {
