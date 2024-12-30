@@ -9,6 +9,9 @@ import netflix_dashboard from '../../../public/netflix_dashboard.png';
 import rising_indians from '../../../public/rising_indians.png';
 import codeTranslator from '../../../public/codeTranslator.png';
 import faceMaskDetection from '../../../public/faceMaskDetection.png';
+import superstore_dashboard from '../../../public/superstore_dashboard.png';
+import speechrecognition from '../../../public/speechrecognition.png';
+import evchargingstation from '../../../public/evchargingstation.png';
 
 const Projects = () => {
     const projects = [
@@ -20,11 +23,39 @@ const Projects = () => {
             technologiesUsed: ["React", "Node.js", "Express", "MongoDB", "AWS"]
         },
         {
+            title: "Global SuperStore Dashboard",
+            description: "Developed interactive dashboard using Dash on Google Cloud to visualize sales trends, profitability, and customer behavior across regions. Optimized insights through PCA, outlier detection, feature engineering, and normality tests, enabling data-driven decision-making for retail operations.",
+            image: superstore_dashboard,
+            link: "https://dashapp-795931816520.northamerica-northeast1.run.app/",
+            technologiesUsed: ["Python", "Dash", "Plotly", "GCP"]
+        },
+        {
             title: "AI Code Translator",
             description: "A powerful web application built with Next.js and TypeScript that leverages the Gemini API for intelligent code translation. This tool uses advanced prompt engineering techniques to accurately convert code between different programming languages, streamlining development workflows and enhancing cross-language compatibility for developers.",
             image: codeTranslator,
             link: "https://github.com/AmishaMe24/ai-code-translator",
             technologiesUsed: ["Next.js", "TypeScript", "Gemini API"]
+        },
+        {
+            title: "Rising Indians App",
+            description: "Rising Indian is a non-profit organization located in Vadodara. This project aims at building an app which helps in volunteer registration for the organization. Features: Sign Up/Login, Upload Event, Like/Comment/Delete Event, Payment Gateway, Timeline, User Account.",
+            image: rising_indians,
+            link: "https://github.com/AmishaMe24/RisingIndiansApp",
+            technologiesUsed: ["Java", "Android Studio", "Firebase", "Razorpay"]
+        },
+        {
+            title: "Speech Emotion Recognition System",
+            description: "Developed the system leveraging CNN and advanced feature extraction techniques (MFCC, ZCR, RMSE), achieving 92% accuracy in identifying emotions from real-time speech data, enhancing human-computer interaction capabilities.",
+            image: speechrecognition,
+            link: "https://github.com/AmishaMe24/Speech-Emotion-Recognition-System",
+            technologiesUsed: ["Python", "TensorFlow", "Librosa", "CNN", "Speech Processing"]
+        },
+        {
+            title: "Optimal Placement of EV Charging stations",
+            description: "Optimized the placement of electric vehicle charging stations in urban environments using K-means clustering and network analysis. Leveraged geospatial and traffic data to identify strategic locations, ensuring enhanced accessibility and sustainability for urban mobility.",
+            image: evchargingstation,
+            link: "#",
+            technologiesUsed: ["Scikit-learn", "GeoPandas", "NetworkX", "Python", "OpenStreetMap", "TomTom Traffic Flow API", "OpenChargeMap API"]
         },
         {
             title: "Exploring World Stock Prices with Machine Learning",
@@ -53,13 +84,6 @@ const Projects = () => {
             image: netflix_dashboard,
             link: "https://github.com/AmishaMe24/netflix-dashboard-tableau",
             technologiesUsed: ["Tableau", "Data Visualization", "Data Analysis"]
-        },
-        {
-            title: "Rising Indians App",
-            description: "Rising Indian is a non-profit organization located in Vadodara. This project aims at building an app which helps in volunteer registration for the organization. Features: Sign Up/Login, Upload Event, Like/Comment/Delete Event, Payment Gateway, Timeline, User Account.",
-            image: rising_indians,
-            link: "https://github.com/AmishaMe24/RisingIndiansApp",
-            technologiesUsed: ["Java", "Android Studio", "Firebase", "Razorpay"]
         }
     ];
 
@@ -89,12 +113,14 @@ const Projects = () => {
                                 duration: 0.8,
                                 ease: "easeInOut",
                             }}
+                            viewport={{ once: true }}
                             className="max-w-sm bg-white border border-gray-200 rounded-lg shadow"
                         >
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.9 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.5, ease: "easeInOut" }}
+                                viewport={{ once: true }}
                                 className='flex justify-center items-center'
                             >
                                 <a href={project.link}>
@@ -107,6 +133,7 @@ const Projects = () => {
                                     href={project.link}
                                     initial={{ opacity: 0, x: -40 }}
                                     whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
                                     transition={{ duration: 0.6, ease: "easeInOut" }}
                                 >
                                     <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">{project.title}</h5>
@@ -115,6 +142,7 @@ const Projects = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.6, ease: "easeInOut" }}
+                                    viewport={{ once: true }}
                                     className="mb-3 font-normal text-gray-700 text-justify"
                                 >
                                     {project.description}
@@ -124,6 +152,7 @@ const Projects = () => {
                                     target='_blank'
                                     initial={{ opacity: 0, scale: 0.9 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: true }}
                                     transition={{ duration: 0.6, ease: "easeInOut" }}
                                     className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#7685d6] rounded-lg hover:bg-[#6E7DCE] focus:ring-4 focus:outline-none focus:ring-blue-300"
                                 >
@@ -137,6 +166,7 @@ const Projects = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.6, ease: "easeInOut" }}
+                                    viewport={{ once: true }}
                                     className="mt-4 flex flex-wrap gap-2"
                                 >
                                     {project.technologiesUsed.map((tech, techIndex) => (

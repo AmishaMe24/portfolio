@@ -20,6 +20,7 @@ export const Hero: React.FC = () => {
                         duration: 0.8,
                         ease: "easeInOut",
                     }}
+                    viewport={{ once: true }}
                     id="home"
                     className="relative flex flex-col items-center justify-center pt-24 mt-4 sm:mt-0 md:mt-8 lg:mt-4 sm:pt-0 md:pt-20 lg:pt-24 gap-0 sm:gap-4 md:gap-2 lg:gap-0"
                 >

@@ -7,28 +7,34 @@ const EducationExperience: React.FC = () => {
             date: "Present",
             label: "The IPO",
             title: "Masters in Computer Science at Virginia Tech",
-            content: "Relevant Coursework: Machine Learning, Intro To Artificial Intelligence, Software Engineering, Cloud Computing, Social Media Analytics, Usability Engineering. CGPA: 3.78/4.0"
+            content: "Relevant Coursework: Machine Learning, Information Visualization, Intro To Artificial Intelligence, Software Engineering, Cloud Computing, Social Media Analytics, Usability Engineering. CGPA: 3.78/4.0"
         },
         {
-            date: "Aug 2024",
+            date: "Aug - Dec 2024",
+            label: "The IPO",
+            title: "Graduate Teaching Assistant at Virginia Tech",
+            content: "Courses BIT 4544 Artificial Intelligence & BIT 3664 Cybersecurity: Supported professor in grading, resolving queries, and making exams & assignments for 120+ students. Assisted in course content delivery on cybersecurity management, risk assessments, IoT/cloud security, and AI/ML/DL algorithms (LLM, RNN, GAN, CNN)"
+        },
+        {
+            date: "Jun - Aug 2024",
             label: "The origin",
             title: "Full-Stack Software Engineer Intern at Flow",
-            content: "Engineered front-end components using React.JS, including advanced React state management, React hooks, and Redux. Implemented interactive graphics using D3.js and utilized Electron for cross - platform deployment. Designed, developed, and tested APIs for integrations between front- end, back - end, AI tasks, and third - party systems. Deployed releases to live production environments on various cloud platforms, ensuring scalability, reliability, & security."
+            content: "Developed REST APIs with Django, PostgreSQL, and Redis, enhancing response times by 40% through caching. Developed responsive UIs with React, Redux, Hooks, advanced state management, and Tailwind CSS, integrating WebSocket connections for real-time updates and boosting user engagement by 25%. Practiced TDD, including unit, integration, regression, and API testing, minimizing production bugs by 50%"
         },
         {
-            date: "JUN, 2023",
+            date: "Jul 2022 - JUN, 2023",
             label: "The milestone",
             title: "Associate Software Engineer at Altera Digital Health",
-            content: "Developed 10+ healthcare modules using C#, .NET, MVC, and WPF, significantly boosting customer satisfaction by 20%, enhancing UI/UX, and improving desktop application responsiveness. • Led a critical migration from GWT to .NET, slashing maintenance by 60% and increasing system performance by 30%. • Spearheaded quality assurance, reducing bug incidence by 25% through advanced unit testing with xUnit; managed peer code reviews and knowledge sharing, increasing coding efficiency by 10%"
+            content: "Built healthcare apps using C#, MVC, WPF, and MySQL, ensuring system reliability and seamless integration. Migrated legacy systems from GWT to .NET, improving performance and reducing maintenance costs by 30%. Implemented microservices architecture and integrated xUnit testing, achieving 95% coverage and minimizing errors"
         },
         {
-            date: "JUN, 2022",
+            date: "Jul 2020 - JUN, 2022",
             label: "The acquisitions",
             title: "Web Developer at Confidosoft Solutions Pvt. Ltd.",
-            content: "• Engineered and deployed full-stack applications using C#, .NET, Angular, and Microsoft SQL Server, delivering 30% increase in operational efficiency through advanced system optimizations. • Designed and launched scalable ASP.NET Core Web APIs for the backend, increasing system throughput by 25%. • Enhanced data integration processes and optimized data querying using Entity Framework and leveraging Angular and Typescript, reducing response times by 20% and increasing user engagement by 15%. • Optimized data exchanges and deployments with RESTful, SOAP, and Jenkins, cutting times by 40%. Mentored 5 developers and coordinated Git, boosting productivity by 20%."
+            content: "Built and optimized backend systems for 8+ full-stack projects using C#, ASP.NET Core, MVC, Entity Framework, SignalR, and REST APIs, enabling real-time updates and improving API performance by 30%. Designed scalable database architectures with MySQL, Oracle, and MongoDB, and developed dynamic frontends with Angular and TypeScript, enhancing user experience for 10K+ end-users."
         },
         {
-            date: "May, 2020",
+            date: "Aug 2016 - May, 2020",
             label: "The IPO",
             title: "Bachelors in Computer Science at Navrachana University",
             content: "Relevant Coursework: Data Structures & Algorithms, Object-Oriented Programming, Machine Learning and Deep Learning, Artificial Intelligence, Database Management, Web Development, Data Analysis, Statistics & Probability. CGPA: 8.34/10.0"

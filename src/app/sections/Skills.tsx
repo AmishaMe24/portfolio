@@ -67,6 +67,7 @@ export const Skills: React.FC = () => {
                             duration: 0.4,
                             ease: "easeInOut",
                         }}
+                        viewport={{ once: true }}
                         className="flex items-center justify-center bg-white p-4 rounded-lg shadow-md"
                     >
                         <Image

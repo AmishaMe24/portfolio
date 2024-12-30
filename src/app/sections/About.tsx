@@ -33,6 +33,7 @@ const About: React.FC = () => {
                                 duration: 0.8,
                                 ease: "easeInOut",
                             }}
+                            viewport={{ once: true }}
                             className="flex flex-col items-center justify-center lg:mr-10"
                         >
                             <Image
@@ -48,7 +49,7 @@ const About: React.FC = () => {
                                     className="bg-white text-black border-neutral-200"
                                     onClick={() => {
                                         window.open(
-                                            "https://drive.google.com/file/d/1Li8Zf8FyGUpl1idUNugKBLt2GdJGGewT/view?usp=sharing",
+                                            "https://drive.google.com/file/d/1V1Px_h1e7SV2MlNx8JiSC3_AVIYzeSfu/view?usp=drive_link",
                                             "_blank"
                                         );
                                     }
