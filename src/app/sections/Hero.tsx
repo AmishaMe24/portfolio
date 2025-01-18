@@ -51,12 +51,12 @@ export const Hero: React.FC = () => {
                             ]}
                         />
                     </div>
-                    <div className="w-full h-[512px] md:h-[512px] lg:h-[420px] 3xl:h-[512px] mt-0 lg:mt-4">
+                </motion.div>
+                <div className="w-full h-[512px] md:h-[512px] lg:h-[420px] 3xl:h-[512px] mt-0 lg:mt-4">
                         <Spline
                             scene="https://prod.spline.design/kR1RqLXL-0jizDdF/scene.splinecode"
                         />
                     </div>
-                </motion.div>
                 <div className="absolute inset-x-0 bottom-0 h-20 bg-fade-to-white" />
             </AuroraBackground>
         </>
