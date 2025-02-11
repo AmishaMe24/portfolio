@@ -12,6 +12,7 @@ import faceMaskDetection from '../../../public/faceMaskDetection.png';
 import superstore_dashboard from '../../../public/superstore_dashboard.png';
 import speechrecognition from '../../../public/speechrecognition.png';
 import evchargingstation from '../../../public/evchargingstation.png';
+import aiDataVisualizationAgent from '../../../public/aiDataVisualizationAgent.png'
 
 const Projects = () => {
     const projects = [
@@ -28,6 +29,13 @@ const Projects = () => {
             image: superstore_dashboard,
             link: "https://dashapp-795931816520.northamerica-northeast1.run.app/",
             technologiesUsed: ["Python", "Dash", "Plotly", "GCP"]
+        },
+        {
+            title: "AI-DataVisualization Agent",
+            description: "This Streamlit app leverages AI to transform raw data into actionable insights. Simply upload a CSV, ask questions in natural language, and watch the AI agent generate code and visualizations to reveal the story within your data.",
+            image: aiDataVisualizationAgent,
+            link: "https://amishame24-ai-datavisualizat-ai-data-visualisation-agent-cmhrlr.streamlit.app/",
+            technologiesUsed: ["Python", "Streamlit", "Together AI", "E2b"]
         },
         {
             title: "AI Code Translator",
