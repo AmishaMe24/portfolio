@@ -54,8 +54,10 @@ export const Hero: React.FC = () => {
                             className="text-2xl md:text-4xl lg:text-3xl font-bold text-black"
                             words={[
                                 "Full-Stack Development",
-                                "Backend Development",
-                                "Machine Learning",
+                                "AI-Powered Applications",
+                                "Machine Learning Engineering",
+                                "LLM Integration",
+                                "Generative AI Solutions",
                             ]}
                         />
                     </motion.div>
@@ -64,13 +66,12 @@ export const Hero: React.FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
-                    className="w-full mt-0 lg:mt-4 flex items-center justify-center"
+                    className="w-full h-full mt-0 lg:mt-4 flex items-center justify-center"
                 >
                     <Image 
                         src={hero_img} 
                         alt="Hero image"
                         priority 
-                        className="object-contain max-h-full w-auto h-auto max-w-[90%] md:max-w-[80%] lg:max-w-[70%]s"
                     />
                 </motion.div>
                 <div className="absolute inset-x-0 bottom-0 h-20 bg-fade-to-white" />
