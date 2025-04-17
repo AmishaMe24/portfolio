@@ -1,10 +1,8 @@
 "use client";
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 import pawstime from '../../../public/pawstime.png';
 import realTimeMusicPlayer from '../../../public/realTimeMusicPlayer.jpg';
 import world_stock from '../../../public/world_stock.png';
-import AnimatedTitle from '../animations/AnimatedTitle';
 import netflix_dashboard from '../../../public/netflix_dashboard.png';
 import rising_indians from '../../../public/rising_indians.png';
 import codeTranslator from '../../../public/codeTranslator.png';
@@ -12,7 +10,8 @@ import faceMaskDetection from '../../../public/faceMaskDetection.png';
 import superstore_dashboard from '../../../public/superstore_dashboard.png';
 import speechrecognition from '../../../public/speechrecognition.png';
 import evchargingstation from '../../../public/evchargingstation.png';
-import aiDataVisualizationAgent from '../../../public/aiDataVisualizationAgent.png'
+import aiDataVisualizationAgent from '../../../public/aiDataVisualizationAgent.png';
+import { motion } from 'framer-motion';
 
 const Projects = () => {
     const projects = [
@@ -100,95 +99,69 @@ const Projects = () => {
     return (
         <div id="projects" className="pt-28">
             <div className='mx-auto flex w-[90%] items-center justify-center'>
-                <AnimatedTitle
-                    text={"Projects"}
-                    className={
-                        "text-left text-[40px] font-bold leading-[0.9em] tracking-tighter text-slate-950 sm:text-[45px] md:text-[60px] lg:text-[80px]"
-                    }
-                    wordSpace={"mr-[14px]"}
-                    charSpace={"mr-[0.001em]"}
-                />
+                <motion.h2 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.25 }}
+                    viewport={{ once: true }}
+                    className="text-left text-[40px] font-bold leading-[0.9em] tracking-tighter text-slate-950 sm:text-[45px] md:text-[60px] lg:text-[80px] mb-4"
+                >
+                    Projects
+                </motion.h2>
             </div>
             <div className='flex justify-center'>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-16 lg:gap-20 p-10">
                     {projects.map((project, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 40 }}
+                            initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{
-                                delay: 0.2 + index * 0.2,
-                                duration: 0.8,
-                                ease: "easeInOut",
+                            transition={{ 
+                                duration: 0.25, 
+                                delay: index * 0.1 % 0.25, // Stagger effect but reset after every row
+                                ease: "easeOut" 
                             }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, margin: "-50px" }}
+                            whileHover={{ scale: 1.03 }}
                             className="max-w-sm bg-white border border-gray-200 rounded-lg shadow"
                         >
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.9 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.5, ease: "easeInOut" }}
-                                viewport={{ once: true }}
-                                className='flex justify-center items-center'
-                            >
+                            <div className='flex justify-center items-center'>
                                 <a href={project.link}>
                                     <Image className="rounded-t-lg fixed-height" src={project.image} alt={project.title} />
                                 </a>
-                            </motion.div>
+                            </div>
 
                             <div className="p-5">
-                                <motion.a
-                                    href={project.link}
-                                    initial={{ opacity: 0, x: -40 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.6, ease: "easeInOut" }}
-                                >
+                                <a href={project.link}>
                                     <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">{project.title}</h5>
-                                </motion.a>
-                                <motion.p
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.6, ease: "easeInOut" }}
-                                    viewport={{ once: true }}
-                                    className="mb-3 font-normal text-gray-700 text-justify"
-                                >
+                                </a>
+                                <p className="mb-3 font-normal text-gray-700 text-justify">
                                     {project.description}
-                                </motion.p>
-                                <motion.a
+                                </p>
+                                <a
                                     href={project.link}
                                     target='_blank'
-                                    initial={{ opacity: 0, scale: 0.9 }}
-                                    whileInView={{ opacity: 1, scale: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.6, ease: "easeInOut" }}
                                     className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-[#7685d6] rounded-lg hover:bg-[#6E7DCE] focus:ring-4 focus:outline-none focus:ring-blue-300"
                                 >
                                     View On GitHub
                                     <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
                                     </svg>
-                                </motion.a>
+                                </a>
 
-                                <motion.div
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.6, ease: "easeInOut" }}
-                                    viewport={{ once: true }}
-                                    className="mt-4 flex flex-wrap gap-2"
-                                >
+                                <div className="mt-4 flex flex-wrap gap-2">
                                     {project.technologiesUsed.map((tech, techIndex) => (
-                                        <span key={techIndex} className={`text-xs font-medium px-2.5 py-0.5 rounded ${badgeColor[techIndex]}`}>
+                                        <span key={techIndex} className={`text-xs font-medium px-2.5 py-0.5 rounded ${badgeColor[techIndex % badgeColor.length]}`}>
                                             {tech}
                                         </span>
                                     ))}
-                                </motion.div>
+                                </div>
                             </div>
                         </motion.div>
                     ))}
                 </div>
             </div>
-        </div >
+        </div>
     );
 }
 

@@ -1,6 +1,4 @@
 import Image from "next/image";
-import AnimatedTitle from "../animations/AnimatedTitle";
-import { motion } from "framer-motion";
 import python_icon from '../../../public/python.png';
 import csharp_icon from '../../../public/c-sharp.png';
 import react_icon from '../../../public/react.png';
@@ -20,6 +18,7 @@ import scikit_learn_icon from '../../../public/scikit-learn.png';
 import postgress_icon from '../../../public/PostgresSQL.png';
 import mysql_icon from '../../../public/MySQL.png';
 import mongodb_icon from '../../../public/MongoDB.png';
+import { motion } from "framer-motion";
 
 export const Skills: React.FC = () => {
     const technologies = [
@@ -47,25 +46,26 @@ export const Skills: React.FC = () => {
     return (
         <div id="skills" className="pt-28">
             <div className='mx-auto flex w-[90%] items-center justify-center'>
-                <AnimatedTitle
-                    text={"Skills"}
-                    className={
-                        "text-left text-[40px] font-bold leading-[0.9em] tracking-tighter text-slate-950 sm:text-[45px] md:text-[60px] lg:text-[80px]"
-                    }
-                    wordSpace={"mr-[14px]"}
-                    charSpace={"mr-[0.001em]"}
-                />
+                <motion.h2 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.25 }}
+                    viewport={{ once: true }}
+                    className="text-left text-[40px] font-bold leading-[0.9em] tracking-tighter text-slate-950 sm:text-[45px] md:text-[60px] lg:text-[80px] mb-4"
+                >
+                    Skills
+                </motion.h2>
             </div>
             <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-6 p-10 lg:pl-24 lg:pr-24">
                 {technologies.map((tech, index) => (
                     <motion.div
                         key={index}
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{
-                            delay: 0.1 + index * 0.2,
-                            duration: 0.4,
-                            ease: "easeInOut",
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ 
+                            duration: 0.4, 
+                            delay: index * 0.05,
+                            ease: "easeOut" 
                         }}
                         viewport={{ once: true }}
                         className="flex items-center justify-center bg-white p-4 rounded-lg shadow-md"

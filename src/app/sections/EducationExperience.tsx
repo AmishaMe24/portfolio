@@ -1,5 +1,5 @@
 import VerticalTimeline01 from '../../components/ui/verticaltimeline1';
-import AnimatedTitle from '../animations/AnimatedTitle';
+import { motion } from 'framer-motion';
 
 const EducationExperience: React.FC = () => {
     const timelineItems = [
@@ -44,26 +44,31 @@ const EducationExperience: React.FC = () => {
     return (
         <div id ="experience" className='pt-28'>
             <div className='mx-auto flex w-[90%] items-center justify-center'>
-                <AnimatedTitle
-                    text={"Education & Experience"}
-                    className={
-                        "text-left text-[40px] font-bold leading-[0.9em] tracking-tighter text-slate-950 sm:text-[45px] md:text-[60px] lg:text-[80px]"
-                    }
-                    wordSpace={"mr-[14px]"}
-                    charSpace={"mr-[0.001em]"}
-                />
+                <motion.h2 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="text-left text-[40px] font-bold leading-[0.9em] tracking-tighter text-slate-950 sm:text-[45px] md:text-[60px] lg:text-[80px] mb-4"
+                >
+                    Education & Experience
+                </motion.h2>
             </div>
-            <div className="relative flex flex-col justify-center overflow-hidden">
+            <motion.div 
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="relative flex flex-col justify-center overflow-hidden"
+            >
                 <div className="w-full max-w-6xl mx-auto px-4 md:px-6">
                     <div className="flex flex-col justify-center divide-y divide-slate-200 [&>*]:py-16">
-
                         <div className="w-full max-w-3xl mx-auto">
                             <VerticalTimeline01 items={timelineItems} />
                         </div>
-
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     );
 }

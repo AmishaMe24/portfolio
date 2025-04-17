@@ -1,30 +1,28 @@
 "use client";
 
-import { motion } from "framer-motion";
 import React from "react";
 import { AuroraBackground } from "../../components/ui/aurora-background";
 import { cn } from "@/lib/utils";
 import AnimatedGradientText from "../../components/magicui/animated-gradient-text";
-import Spline from "@splinetool/react-spline";
 import WordRotate from "../../components/magicui/word-rotate";
+import Image from "next/image";
+import hero_img from "../../../public/hero.png";
+import { motion } from "framer-motion";
 
 export const Hero: React.FC = () => {
     return (
         <>
             <AuroraBackground>
-                <motion.div
-                    initial={{ opacity: 0.0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{
-                        delay: 0.3,
-                        duration: 0.8,
-                        ease: "easeInOut",
-                    }}
-                    viewport={{ once: true }}
+                <div
                     id="home"
                     className="relative flex flex-col items-center justify-center pt-24 mt-4 sm:mt-0 md:mt-8 lg:mt-4 sm:pt-0 md:pt-20 lg:pt-24 gap-0 sm:gap-4 md:gap-2 lg:gap-0"
                 >
-                    <div className="z-10 flex items-center justify-center">
+                    <motion.div 
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        className="z-10 flex items-center justify-center"
+                    >
                         <AnimatedGradientText>
                             <span
                                 className={cn(
@@ -34,11 +32,21 @@ export const Hero: React.FC = () => {
                                 <p>Hi There!!👋🏻✨</p>
                             </span>
                         </AnimatedGradientText>
-                    </div>
-                    <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-center mt-2 sm:mt-2">
+                    </motion.div>
+                    <motion.h1 
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.7, delay: 0.2 }}
+                        className="text-4xl md:text-5xl lg:text-7xl font-bold text-center mt-2 sm:mt-2"
+                    >
                         I’m Amisha Mehta
-                    </h1>
-                    <div className="flex flex-col sm:flex-row gap-2 items-center mt-2 sm:mt-3 text-center sm:text-left">
+                    </motion.h1>
+                    <motion.div 
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.7, delay: 0.4 }}
+                        className="flex flex-col sm:flex-row gap-2 items-center mt-2 sm:mt-3 text-center sm:text-left"
+                    >
                         <div className="font-extralight text-xl sm:text-base md:text-2xl lg:text-2xl">
                             I’m interested in
                         </div>
@@ -50,13 +58,21 @@ export const Hero: React.FC = () => {
                                 "Machine Learning",
                             ]}
                         />
-                    </div>
+                    </motion.div>
+                </div>
+                <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.6 }}
+                    className="w-full mt-0 lg:mt-4 flex items-center justify-center"
+                >
+                    <Image 
+                        src={hero_img} 
+                        alt="Hero image"
+                        priority 
+                        className="object-contain max-h-full w-auto h-auto max-w-[90%] md:max-w-[80%] lg:max-w-[70%]s"
+                    />
                 </motion.div>
-                <div className="w-full h-[512px] md:h-[512px] lg:h-[420px] 3xl:h-[512px] mt-0 lg:mt-4">
-                        <Spline
-                            scene="https://prod.spline.design/kR1RqLXL-0jizDdF/scene.splinecode"
-                        />
-                    </div>
                 <div className="absolute inset-x-0 bottom-0 h-20 bg-fade-to-white" />
             </AuroraBackground>
         </>
